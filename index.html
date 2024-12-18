@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 user-scalable=no"
+    />
+    <title>Tutorial Tailwind</title>
+
+    <!-- Website Url Icon -->
+    <link rel="icon" type="image/x-icon" href="gorila.jpg" />
+
+    <!-- CDN Daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- CDN Script Tailwind Css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      .kotak {
+        background-color: blue;
+        padding: 100px 200px;
+        color: white;
+      }
+
+      .kotak p {
+        font-size: 100px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="kotak">
+      <p>Ini native css</p>
+    </div>
+
+    <div class="kotak-2 mt-4 py-4 bg-slate-600 text-center">
+      <p class="text-white">Ini adalah class dari tailwind</p>
+    </div>
+
+    <div class="kotak-3 mt-[16px] py-[50px] text-center bg-[#06402B]">
+        <p class="text-[#fff]">
+            Ini Menggunakan inline style css dari tailwind
+        </p>
+    </div>
+
+    <div class="mt-6 text-center">
+        <p class="text-center text-[30px] font-bold">Ini adalah daftar button menggunakan DaisyUi</p>
+        <div class="button-group mt-6">
+            <button class="btn btn-info">Info</button>
+            <button class="btn btn-success">Success</button>
+            <button class="btn btn-warning">Warning</button>
+            <button class="btn btn-error">Error</button>
+        </div>
+    </div>
+  </body>
+</html>
