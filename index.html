@@ -2,10 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 user-scalable=no"
+    />
     <title>Portfolio Example Using Tailwind CSS and DaisyUi</title>
 
-    <link rel="icon" href="">
+    <link rel="icon" type="x-icon" href="assets/oppenheimer.jpg" />
 
     <!-- CDN Daisy UI -->
     <link
@@ -13,6 +16,9 @@
       rel="stylesheet"
       type="text/css"
     />
+
+    <!-- CDN Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
     <!-- CDN Script Tailwind Css -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -22,15 +28,23 @@
   </head>
   <body>
     <!-- Navbar -->
-    <div class="navbar bg-gray-950 text-white justify-between mx-auto fixed top-0 left-0 right-0 z-10">
-      <div class="container mx-auto flex flex-wrap items-center justify-between">
+    <div
+      class="navbar bg-gray-800 text-white justify-between mx-auto fixed top-0 left-0 right-0 z-10"
+    >
+      <div
+        class="container mx-auto flex flex-wrap items-center justify-between"
+      >
         <!-- Logo -->
         <div class="flex-1">
           <a class="font-bold text-xl">
-            <img src="assets/oppenheimer.jpg" class="w-16 h-16 object-cover rounded-full"  alt="">
+            <img
+              src="assets/oppenheimer.jpg"
+              class="w-16 h-16 object-cover rounded-full"
+              alt=""
+            />
           </a>
         </div>
-    
+
         <!-- Menu button for mobile -->
         <div class="block lg:hidden">
           <button
@@ -40,27 +54,24 @@
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="none"
               viewBox="0 0 24 24"
-              stroke="currentColor"
+              fill="currentColor"
+              class="size-6"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16m-7 6h7"
+                fill-rule="evenodd"
+                d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+                clip-rule="evenodd"
               />
             </svg>
           </button>
         </div>
-    
+
         <!-- Menu items -->
-        <div
-          id="menu-items"
-          class="hidden lg:flex flex-none w-full lg:w-auto"
-        >
-          <ul class="menu menu-horizontal px-1 w-full lg:w-auto flex flex-col lg:flex-row lg:items-center">
+        <div id="menu-items" class="hidden lg:flex flex-none w-full lg:w-auto">
+          <ul
+            class="menu menu-horizontal px-1 py-4 w-full lg:w-auto flex flex-col lg:flex-row lg:items-center gap-x-3"
+          >
             <li>
               <a href="#" class="font-bold text-lg">About Me</a>
             </li>
@@ -97,26 +108,25 @@
     <!-- End Hero Section -->
 
     <!-- About Me -->
-    <section
-      class="mt-40 flex gap-x-10 justify-center items-center container mx-auto"
-      id="about"
-    >
-      <div class="container">
-        <h1 class="text-4xl font-bold">About Me</h1>
-        <p class="mt-2 text-lg">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Exercitationem reiciendis animi iste beatae officia officiis ullam
-          itaque provident quod, aspernatur maxime molestias a architecto
-          obcaecati, veritatis veniam doloribus perferendis labore aperiam totam
-          consequuntur. Beatae illum odio in vel, perspiciatis itaque
-          consequatur quam provident earum velit ex. Eius reprehenderit debitis
-          omnis rem dolor tempore, harum dignissimos blanditiis ex maiores quis
-          enim expedita doloremque rerum animi?
-        </p>
-      </div>
-      <div class="avatar">
-        <div class="w-96 rounded-full">
-          <img src="assets/oppenheimer.jpg" />
+    <section class="py-40 mx-auto bg-gray-950 text-white" id="about">
+      <div class="container flex lg:px-6 xl:px-1 gap-x-12 justify-center items-center mx-auto">
+        <div class="about-text">
+          <h1 class="text-4xl font-bold">About Me</h1>
+          <p class="mt-4 text-lg">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem reiciendis animi iste beatae officia officiis ullam
+            itaque provident quod, aspernatur maxime molestias a architecto
+            obcaecati, veritatis veniam doloribus perferendis labore aperiam
+            totam consequuntur. Beatae illum odio in vel, perspiciatis itaque
+            consequatur quam provident earum velit ex. Eius reprehenderit
+            debitis omnis rem dolor tempore, harum dignissimos blanditiis ex
+            maiores quis enim expedita doloremque rerum animi?
+          </p>
+        </div>
+        <div class="avatar">
+          <div class="w-80 rounded-full">
+            <img src="assets/oppenheimer.jpg" />
+          </div>
         </div>
       </div>
     </section>
@@ -124,22 +134,20 @@
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white">
-
       <div class="container mx-auto px-4 py-8">
         <!-- Flex Container -->
-        <div class="flex flex-col md:flex-row justify-between">
+        <div class="flex flex-col md:flex-row md:justify-between">
           <!-- Bagian About -->
-          <div class="mb-8 md:mb-0 md:w-1/3">
+          <div class="mb-8 md:mb-0 md:w-2/4 lg:w-25">
             <h3 class="text-lg font-semibold mb-4">Tentang Kami</h3>
             <p class="text-sm text-gray-400">
-              Kami adalah penyedia layanan terbaik untuk kebutuhan Anda. Fokus
-              kami adalah memberikan solusi inovatif dan berkualitas.
+              Saya adalah seorang Junior Web Development yang saat ini sedang bersekolah Di SMK NEGERI 8 SEMARANG. Jika anda berminat dengan skill saya, boleh contact saya pada halaman yang tersedia
             </p>
           </div>
 
           <!-- Bagian Links -->
-          <div class="mb-8 md:mb-0 md:w-1/3">
-            <h3 class="text-lg font-semibold mb-4">Tautan Cepat</h3>
+          <div class="mb-8 md:mb-0 md:w-1/4 lg:w-1/5">
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
             <ul>
               <li>
                 <a href="#" class="text-sm text-gray-400 hover:text-white"
@@ -165,11 +173,19 @@
           </div>
 
           <!-- Bagian Contact -->
-          <div class="md:w-1/3">
-            <h3 class="text-lg font-semibold mb-4">Hubungi Kami</h3>
+          <div class="md:w-1/4 lg:w-1/5">
+            <h3 class="text-lg font-semibold mb-4">Social Media</h3>
             <ul>
-              <li class="text-sm text-gray-400">Email: support@contoh.com</li>
-              <li class="text-sm text-gray-400">Telepon: +62 812 3456 7890</li>
+              <li class="text-sm text-gray-400 flex items-center gap-x-2">
+              <a href="https://www.instagram.com/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              </li>
+              <li class="text-sm text-gray-400 flex items-center gap-x-2">
+                <i class="fa-brands fa-whatsapp">
+                  <a href=""></a>
+                </i>
+              </li>
               <li class="text-sm text-gray-400">
                 Alamat: Jl. Contoh No.123, Jakarta
               </li>
@@ -186,5 +202,15 @@
       </div>
     </footer>
     <!-- End Footer -->
+
+    <script>
+      // Script untuk toggle menu di mobile
+      const menuToggle = document.getElementById("menu-toggle");
+      const menuItems = document.getElementById("menu-items");
+
+      menuToggle.addEventListener("click", () => {
+        menuItems.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>
